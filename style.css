@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section {
+    min-height: 100vh;
+}
+
+.box {
+    background-image: url(./chips.gif);
+    background-size: cover;
+    background-color: #aa6670;
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    opacity: 0;
+    transform: translateX(100px);
+    transition: .3s;
+}
+
+.box.show {
+    opacity: 1;
+    transform: translateX(0);
+    animation: animate 1s;
+}
+
+@keyframes animate {
+    to {filter: hue-rotate(360deg);}
+}
